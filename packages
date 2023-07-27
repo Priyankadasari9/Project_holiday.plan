@@ -1,0 +1,348 @@
+html:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+<div class="scroll-container">
+   
+    
+  
+   
+    
+    <div class="w3-container w3-padding-64">
+        <h2 style="color:rgb(222, 86, 108);"><b>Explore The World!</b></h2><br>
+        <p  style="color: black;">Are you ready to escape the everyday hustle and bustle and embark on a journey to paradise? Discover the ultimate retreat designed to soothe your soul and create lasting memories. Welcome to "Plan4Holiday"!</p>
+        <div class="w3-row-padding w3-margin-top">
+            <!-- Add featured package cards here -->
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://thumbs.dreamstime.com/b/india-gate-night-war-memorial-located-astride-rajpath-road-new-delhi-59788765.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Delhi</h3>
+                        <p>Pack your bags for 5D & 4N. Places covered : Red Fort,Taj Mahal,Qutub Minar, Hauz Khas Fort, Humayun's Tomb, Rashtrapati Bhawan, Jantar Mantar, Akshardham Temple, Lotus Temple, Lodhi Gardens,Tughlaqabad Fort, Mehrauli Archaeological Park,Jama Masjid. </p>
+                        <a [routerLink]="['/delhi']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.ekeralatourism.net/wp-content/uploads/2018/03/Alleppey.jpg" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Kerala</h3>
+                        <p>Book your dream holiday with us today and let the journey to God's own country begin!.Pack your bags for 8D & 7N.7 Nights Itinerary Covering: Cochin - Munnar - Thekkady - Alleppey - Kovalam - Trivandrum.</p>
+                        <a [routerLink]="['/kerala']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-71b4808f37dc979261f92606d240a82c-lq" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Gokarna</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Mahabaleswara Temple,Om Beach,Paradise Beach,Kudle Beach,Mirjan Fort,Half Moon Beach,Yana caves,Apsarakonda falls,Vibhoothi falls,Dandeli water sports</p>
+                        <a [routerLink]="['/gokarna']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/02/Dudhsagar-Waterfalls-1.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Goa</h3>
+                        <p>Pack your bags for 5D & 4N. Places covered : Aguada Fort,Basilica of Bom Jesus,Our Lady of the Immaculate,Anjuna Beach,Baga Beach,Candolim, Arambol,Santa Cruz Church. </p>
+                        <a [routerLink]="['/goa']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://voiceofadventure.com/wp-content/uploads/2022/08/front-view-golden-globe-image-pondicherry_694820-20.jpg" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Pondicherry</h3>
+                        <p>Pack your bags for 3D & 2N.Places covered :Seaside Promenade,Paradise Beach,The Basilica of the Sacred Heart of Jesus,Sri Aurobindo Ashram,Rock Beach,Auroville,French colony </p>
+                        <a [routerLink]="['/pondicherry']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://static.javatpoint.com/tourist-places/images/tourist-places-in-kodagu9.png" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Coorg & chikmagalur</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered: Baba Budangiri,Abbey Falls,Namdroling Monastery,Mullayanagiri,Manikyadhara Falls,Dubare Elephant Camp,Hebbe Falls,Jhari Waterfalls.</p>
+                        <a [routerLink]="['/coorg']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/mountain-3092438_960_720_20190313095203.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color: rgb(222, 86, 108);">Manali</h3>
+                        <p>Pack your bags for 7D & 6N. Places covered :Hidimba Devi Temple,Beas River,Solang Valley,Jogini Waterfall,Manikaran Gurudwara,Solang Nullah.</p>
+                        <a [routerLink]="['/manali']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/zanskar-river-3859214_1920_20190304123111.jpg" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Leh,Ladakh</h3>
+                        <p>Pack your bags for 9D & 8N.Places covered:Pangong Tso,Hall of Fame,Thiksey Monastery,Gurdwara Pathar Sahib,Indus and Zanskar Rivers,Shanti Stupa.</p>
+                        <a [routerLink]="['/leh']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1349545253_20190715095335.jpg" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Udaipur</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Lake Pichola,City Palace of Udaipur,Bagore Ki Haveli Museum,Shri Ekling Ji Temple,Jagdish Temple,Srinathji Temple.</p>
+                        <a [routerLink]="['/udaipur']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.savaari.com/blog/wp-content/uploads/2021/12/1024px-Mumbai_Aug_2018_43397784544-1024x761.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color: rgb(222, 86, 108);">Mumbai</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Marine Drive,Gateway of India,Chowpatty Beach,Juhu Beach,Dharavi Slum,Worli Seaface,Haji Ali,Aksa Beach,Versova Beach,Powai Lake,Kanheri Caves,Gorai Beach,ISKCON temple.</p>
+                        <a [routerLink]="['/mumbai']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-5565f3379d32605e33f0994ef95c2c68-lq" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Rameshwaram</h3>
+                        <p>Pack your bags for 5D & 4N.Places covered:Dhanushkodi Beach Point,Pamban bridge,Kalam House,Annai Indira Gandhi Road Bridge, Gulf of Mannar Marine National Park, Adam's Bridge, Pamban island, Church and Station Ruins.</p>
+                        <a [routerLink]="['/rameshwaram']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://drivingford.india.ford.com/wp-content/uploads/2019/07/5.jpg" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Telangana & AP</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Golconda Fort,Birla Mandir,Salar Jung Museum,Charminar,Chowmahalla Palace,NTR gardens,Budha statue,Gandikota,Belum caves,LepakshiTadipatri.</p>
+                       <a [routerLink]="['/telangana']" class="w3-btn w3-pink">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+     </div>
+
+ 
+    </div>
+    <!-- JavaScript (optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
+
+
+
+
+----------------------------------------------------------------------------------------------------
+
+css:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+<div class="scroll-container">
+   
+    
+  
+   
+    
+    <div class="w3-container w3-padding-64">
+        <h2 style="color:rgb(222, 86, 108);"><b>Explore The World!</b></h2><br>
+        <p  style="color: black;">Are you ready to escape the everyday hustle and bustle and embark on a journey to paradise? Discover the ultimate retreat designed to soothe your soul and create lasting memories. Welcome to "Plan4Holiday"!</p>
+        <div class="w3-row-padding w3-margin-top">
+            <!-- Add featured package cards here -->
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://thumbs.dreamstime.com/b/india-gate-night-war-memorial-located-astride-rajpath-road-new-delhi-59788765.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Delhi</h3>
+                        <p>Pack your bags for 5D & 4N. Places covered : Red Fort,Taj Mahal,Qutub Minar, Hauz Khas Fort, Humayun's Tomb, Rashtrapati Bhawan, Jantar Mantar, Akshardham Temple, Lotus Temple, Lodhi Gardens,Tughlaqabad Fort, Mehrauli Archaeological Park,Jama Masjid. </p>
+                        <a [routerLink]="['/delhi']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.ekeralatourism.net/wp-content/uploads/2018/03/Alleppey.jpg" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Kerala</h3>
+                        <p>Book your dream holiday with us today and let the journey to God's own country begin!.Pack your bags for 8D & 7N.7 Nights Itinerary Covering: Cochin - Munnar - Thekkady - Alleppey - Kovalam - Trivandrum.</p>
+                        <a [routerLink]="['/kerala']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-71b4808f37dc979261f92606d240a82c-lq" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Gokarna</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Mahabaleswara Temple,Om Beach,Paradise Beach,Kudle Beach,Mirjan Fort,Half Moon Beach,Yana caves,Apsarakonda falls,Vibhoothi falls,Dandeli water sports</p>
+                        <a [routerLink]="['/gokarna']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.fabhotels.com/blog/wp-content/uploads/2019/02/Dudhsagar-Waterfalls-1.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Goa</h3>
+                        <p>Pack your bags for 5D & 4N. Places covered : Aguada Fort,Basilica of Bom Jesus,Our Lady of the Immaculate,Anjuna Beach,Baga Beach,Candolim, Arambol,Santa Cruz Church. </p>
+                        <a [routerLink]="['/goa']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://voiceofadventure.com/wp-content/uploads/2022/08/front-view-golden-globe-image-pondicherry_694820-20.jpg" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Pondicherry</h3>
+                        <p>Pack your bags for 3D & 2N.Places covered :Seaside Promenade,Paradise Beach,The Basilica of the Sacred Heart of Jesus,Sri Aurobindo Ashram,Rock Beach,Auroville,French colony </p>
+                        <a [routerLink]="['/pondicherry']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://static.javatpoint.com/tourist-places/images/tourist-places-in-kodagu9.png" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Coorg & chikmagalur</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered: Baba Budangiri,Abbey Falls,Namdroling Monastery,Mullayanagiri,Manikyadhara Falls,Dubare Elephant Camp,Hebbe Falls,Jhari Waterfalls.</p>
+                        <a [routerLink]="['/coorg']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/mountain-3092438_960_720_20190313095203.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color: rgb(222, 86, 108);">Manali</h3>
+                        <p>Pack your bags for 7D & 6N. Places covered :Hidimba Devi Temple,Beas River,Solang Valley,Jogini Waterfall,Manikaran Gurudwara,Solang Nullah.</p>
+                        <a [routerLink]="['/manali']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/zanskar-river-3859214_1920_20190304123111.jpg" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Leh,Ladakh</h3>
+                        <p>Pack your bags for 9D & 8N.Places covered:Pangong Tso,Hall of Fame,Thiksey Monastery,Gurdwara Pathar Sahib,Indus and Zanskar Rivers,Shanti Stupa.</p>
+                        <a [routerLink]="['/leh']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1349545253_20190715095335.jpg" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Udaipur</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Lake Pichola,City Palace of Udaipur,Bagore Ki Haveli Museum,Shri Ekling Ji Temple,Jagdish Temple,Srinathji Temple.</p>
+                        <a [routerLink]="['/udaipur']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://www.savaari.com/blog/wp-content/uploads/2021/12/1024px-Mumbai_Aug_2018_43397784544-1024x761.jpg" alt="Package 1">
+                    <div class="w3-container">
+                        <h3 style="color: rgb(222, 86, 108);">Mumbai</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Marine Drive,Gateway of India,Chowpatty Beach,Juhu Beach,Dharavi Slum,Worli Seaface,Haji Ali,Aksa Beach,Versova Beach,Powai Lake,Kanheri Caves,Gorai Beach,ISKCON temple.</p>
+                        <a [routerLink]="['/mumbai']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://qph.cf2.quoracdn.net/main-qimg-5565f3379d32605e33f0994ef95c2c68-lq" alt="Package 2">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Rameshwaram</h3>
+                        <p>Pack your bags for 5D & 4N.Places covered:Dhanushkodi Beach Point,Pamban bridge,Kalam House,Annai Indira Gandhi Road Bridge, Gulf of Mannar Marine National Park, Adam's Bridge, Pamban island, Church and Station Ruins.</p>
+                        <a [routerLink]="['/rameshwaram']" class="w3-btn w3-pink">View More</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w3-third">
+                <div class="w3-card">
+                    <img src="https://drivingford.india.ford.com/wp-content/uploads/2019/07/5.jpg" alt="Gallery">
+                    <div class="w3-container">
+                        <h3 style="color:rgb(222, 86, 108);">Telangana & AP</h3>
+                        <p>Pack your bags for 4D & 3N.Places covered:Golconda Fort,Birla Mandir,Salar Jung Museum,Charminar,Chowmahalla Palace,NTR gardens,Budha statue,Gandikota,Belum caves,LepakshiTadipatri.</p>
+                       <a [routerLink]="['/telangana']" class="w3-btn w3-pink">Learn More</a>
+                    </div>
+                </div>
+            </div>
+    
+     </div>
+
+ 
+    </div>
+    <!-- JavaScript (optional) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</div>
+</body>
+</html>
+
+------------------------------------------------------------------------------------------
+
+
