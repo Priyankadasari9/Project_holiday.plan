@@ -1,0 +1,27 @@
+import { Component} from '@angular/core';
+
+@Component({
+  selector: 'app-delhi',
+  templateUrl: './delhi.component.html',
+  styleUrls: ['./delhi.component.css']
+})
+export class DelhiComponent {
+ 
+  holidayDestinations = [
+    {
+      name: 'Redfort',
+      description: 'Mumtaz Mahal, a palace that houses Red Fort Archaeological Museum. Rang Mahal, a palace where the emperors wives and mistresses were housed. Khas Mahal, the apartment of the emperor. Diwan-i-Aam, the public audience hall.',
+      imageUrl:'https://shortbreakcompany.com/wp-content/uploads/Red-Fort.png' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Taj Mahal',
+      description: 'It was built by Mughal Emperor Shah Jahan in memory of his wife Mumtaz Mahal with construction starting in 1632 AD and completed in 1648 AD, with the mosque, the guest house and the main gateway on the south, the outer courtyard and its cloisters were added subsequently and completed in 1653 AD.',
+      imageUrl: 'https://media.tacdn.com/media/attractions-splice-spp-360x240/06/74/2c/7d.jpg',
+      state: 'hidden'
+    },
+  ];
+
+ 
+   
+}
