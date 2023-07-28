@@ -1,0 +1,312 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Kerala</h2><br>
+      <p>Named as one of the ten paradises of the world by National Geographic Traveler, Kerala is one of the prominent tourist destinations of India, with coconut-lined sandy beaches, backwaters, hill stations, Ayurvedic tourism and tropical greenery as its major attractions.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic">
+<h4><p>Pack your bags for 8D & 7N. </p></h4>
+<h4><p>Package costs 15000₹</p></h4>
+<h4><p>Places covered :  Cochin - Munnar - Thekkady - Alleppey - Kovalam - Trivandrum.</p></h4>
+</div>
+   
+
+  <div class="images" id="kerala">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://www.ekeralatourism.net/wp-content/uploads/2015/12/munnar-1.png" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.ekeralatourism.net/wp-content/uploads/2018/03/Kumarakom.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.ekeralatourism.net/wp-content/uploads/2017/12/Kovalam.jpg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="https://www.ekeralatourism.net/wp-content/uploads/2018/03/Kollam.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.mala.co.in/sites/default/files/article/athirapally-waterfalls-monsoon-season_0.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/68/9d/60/chinnakanal-waterfalls.jpg?w=500&h=400&s=1" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+  
+
+ 
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+  
+  
+
+</div>
+</body>
+</html>
+
+------------------------------------------------------
+css 
+
+.scroll-container {
+    width: 1600px;
+    height: 600px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Style the header navigation links */
+
+
+/* Home Page Banner */
+.w3-container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.w3-container h1 {
+    font-weight: bold;
+}
+
+.w3-container p {
+    font-size: 20px;
+}
+
+/* Featured Packages */
+.w3-card {
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+.w3-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.w3-card h3 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.w3-card p {
+    font-size: 16px;
+    color: #888;
+}
+
+.w3-btn {
+    margin-top: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+
+.destination-scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+}
+
+.destination-scroll-container .w3-card {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 10px;
+}
+
+.pink
+{
+    color:#ff3c78; 
+}
+
+
+
+
+
+/* CSS for card hover effect */
+.w3-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* CSS for image card effect */
+.w3-card img {
+    transition: transform 0.3s ease;
+}
+
+.w3-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Optional: Add a transition to the "Learn More" button */
+.w3-card .w3-btn {
+    transition: background-color 0.3s ease;
+}
+
+.w3-card:hover .w3-btn {
+    background-color: #333;
+}
+
+
+
+
+
+/* holiday.component.css */
+.image-wrapper {
+    display: flex;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  
+  .matter {
+    flex: 0 0 500px; /* Adjust the width of the matter as needed */
+    padding: 10px;
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+    background-color: #f5f5f5;
+    padding: 10px;
+  }
+  
+  .right-side-content {
+    flex: 0 0 200px; /* Adjust the width of the right-side content as needed */
+    padding: 10px;
+    background-color: #ebebeb; /* Add a background color to the right-side content */
+  }
+  
+  /* Rest of the CSS styles for .image-slide, .animated-image, .image-text, etc. remains the same */
+  
+  
+.image-slide {
+  position: relative;
+  flex: 0 0 400px;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff; /* Add a background color to the individual slide */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for a card-like effect */
+}
+
+.animated-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px 10px 0 0; /* Round the top corners of the image slide */
+}
+
+.image-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+  border-radius: 0 0 10px 10px; /* Round the bottom corners of the text container */
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.image-slide:hover .image-text {
+  transform: translateY(0);
+}
+
+/* Style the text elements */
+.image-text h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.image-text p {
+  margin: 5px 0 0;
+  font-size: 1rem;
+}
+
+.button {
+    margin-top: 20px; /* Add some margin for spacing */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+  }
+
+  .topic {
+    text-align: center; /* Center the button horizontally */
+   }
+-----------------------------------------
+ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-kerala',
+  templateUrl: './kerala.component.html',
+  styleUrls: ['./kerala.component.css']
+})
+export class KeralaComponent {
+  holidayDestinations = [
+    {
+      name: 'Backwater boating',
+      description: 'Look deep into nature, and then you will understand everything better',
+      imageUrl:'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80',
+      state: 'hidden'
+    },
+    {
+      name: 'Cochin',
+      description: 'Its lush unspoiled tropical beauty, exotic locales and tranquil backwaters attract travelers from across the world who seeks leisurely vacation. Apart from its picturesque scenery, Kerala is also known for its rich wildlife and elaborate temples.',
+      imageUrl: 'https://www.ekeralatourism.net/wp-content/uploads/2018/03/Cochin.jpg',
+      state: 'hidden'
+    },
+  ];
+}
