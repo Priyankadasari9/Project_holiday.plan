@@ -1,8 +1,11 @@
 .background-image {
-    background-image: url('https://media.istockphoto.com/id/1316641853/photo/summer-travel-concept-from-smartphone-and-suitcase-with-summer-collection-on-pink-background.jpg?s=612x612&w=0&k=20&c=EA8MQnPva9TmQhUWEc1s39rMXWXF2rkHlNYbg3KtM8s=');
+    background-image: url('https://static.vecteezy.com/system/resources/previews/002/065/154/original/airplane-passport-and-boarding-pass-on-empty-background-with-copy-space-for-text-travel-background-illustration-free-vector.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-  height:1500;
+    position: relative;
+    bottom: 20%;
+    height:700px;
+    
   }
 
 * {
