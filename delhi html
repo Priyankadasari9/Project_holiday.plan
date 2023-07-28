@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Delhi</h2><br>
+      <p>New Delhi is best known as the location of India's national government. New Delhi has great historical significance as it was home to powerful people, such as the Pāṇḍavas and the Mughals. The city has many historical monuments and tourist attractions as well as lively marketplaces and great food, such as chaat.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 5D & 4N.</h4>
+<h4><p>Package costs 9000₹</p></h4>
+<h4><p>Places covered : Red Fort,Taj Mahal,Qutub Minar, Hauz Khas Fort,</p></h4>
+    <h4><p>Humayun's Tomb, Rashtrapati Bhawan, Jantar Mantar, Akshardham Temple,</p></h4>
+        <h4><p>Lotus Temple, Lodhi Gardens,Tughlaqabad Fort, Mehrauli Archaeological Park,Jama Masjid.</p></h4>
+</div>
+  <div class="images" id="delhi">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_nYD4-tvCNL8X5vp4Ha4bBk6olVkNUU_Wgg&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://res.cloudinary.com/thrillophilia/image/upload/c_fill,f_auto,fl_progressive.strip_profile,g_center,h_230,q_auto,w_305/v1/filestore/jdba4ix0vx6b6b4yzmbo2qv3xist_shutterstock_539091853.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.holidify.com/images/cmsuploads/compressed/Qutub_Minar_in_the_monsoons_20170908115259.jpg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg7Zbi2WWUVbiOnX6YXZElJhVjxGVwQwxW0w&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://res.cloudinary.com/purnesh/image/upload/f_auto/v1613991699/231613991698489.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://staticimg.amarujala.com/assets/images/2022/11/22/750x506/india-gate_1669115118.jpeg?w=414" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+  
+
+ 
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+  
+  
+
+</div>
+</body>
+</html>
+  
