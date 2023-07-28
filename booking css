@@ -1,0 +1,109 @@
+/* travel-form.component.css */
+.scroll-container {
+  
+    width: 1600px;
+    height: 900px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+  }
+
+form {
+    margin-top: 20%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #eb5890ba;
+    background-color:rgb(234, 230, 232);
+    border-radius: 8px;
+  }
+  
+  div {
+    margin-bottom:0;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #b24588;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: rgba(0, 0, 0, 0.804);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; 
+    display: flex;
+    justify-content: center;
+  }
+  
+  button:hover {
+    background-color:rgba(207, 77, 161, 0.582) ;
+  }
+  
+
+  /* travel-form.component.css */
+
+/* Style for all select elements in the form */
+form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Style for the option with "Select a hotel" or "Select a package" as the default text */
+  form select option[disabled]:first-child {
+    color: #aaa;
+  }
+  
+  /* Style for the selected option */
+  form select option:checked {
+    background-color: #4caf50;
+    color: #fff;
+  }
+  
+  /* Style for the dropdown arrow icon (if supported by the browser) */
+  form select::-ms-expand {
+    display: none; /* Remove the default arrow in IE/Edge */
+  }
+  
+  /* Add custom dropdown arrow icon (optional) */
+  form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+   
+    background-size: 20px;
+    padding-right: 30px; /* Adjust this value to align the text and arrow icon */
+  }
+  
+  /* Add custom styles to indicate focus and hover states (optional) */
+  form select:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  form select:hover {
+    border-color: #4caf50;
+  }
+ 
+ 
+  .background-image {
+    background-image: url('https://images.unsplash.com/photo-1526772662000-3f88f10405ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dHJhdmVsbGluZ3xlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80');
+    background-size: cover;
+    position: relative;
+  height:1300px;
+  }
