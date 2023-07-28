@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Rameshwaram</h2><br>
+      <p>Rameswaram is significant for many Hindus as a pilgrimage to Varanasi is considered to be incomplete without a pilgrimage to Rameswaram.</p>
+    </div>
+    <div class="image-container">
+        <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 5D & 4N.</h4>
+<h4><p>Package costs 9000₹</p></h4>
+<h4><p>Places covered : Dhanushkodi Beach Point,Pamban bridge,Kalam House,Annai Indira Gandhi Road Bridge,</p></h4>
+    <h4><p>Gulf of Mannar Marine National Park, Adam's Bridge, Pamban island, Church and Station Ruins,</p></h4>
+        
+</div>
+  <div class="images" id="delhi">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://t3.ftcdn.net/jpg/05/01/60/56/360_F_501605616_YZPuPHvJQakrORt8NnWhIZuDA5XsMov6.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://images.hindustantimes.com/img/2022/12/01/550x309/pamban_1669916275127_1669916326001_1669916326001.jfif" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/04/01003546/KALAAM-HOUSE1.jpg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT042-QjsDqCO5eJTEka4KdUegZkUKa6rP_wQ&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.makemytrip.com/travel-guide/media/dg_image/rameswaram/Annai-Indira-Gandhi-Bridge-Rameswaram.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://examra.com/wp-content/uploads/2023/04/25533813606_d77b4ac49c_b.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+</div>
+</body>
+</html>
+-------------------------------------------
+
+ts
+
+import { state } from '@angular/animations';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-rameshwaram',
+  templateUrl: './rameshwaram.component.html',
+  styleUrls: ['./rameshwaram.component.css']
+})
+export class RameshwaramComponent {
+  holidayDestinations = [
+    {
+      name: 'Adams bridge',
+      description: 'Adams bridge is also known as Ramas Bridge or Rama Setu ,It is a chain of natural limestone shoals, between Pamban Island, also known as Rameswaram Island, off the south-eastern coast of Tamil Nadu, India.',
+      imageUrl:'https://gondwana.university/wp-content/uploads/2022/10/38ff3a0f-fd1tjz3vua04iqp.jpg',
+      state: 'hidden'
+    },
+    {
+      name: 'Pamban Island',
+      description: 'Pamban Island is the largest island in Tamil Nadu in terms of area and is known worldwide for the popular pilgrimage site Rameshwaram.',
+      imageUrl: 'https://mediaim.expedia.com/destination/2/0c50f2e2a7422799bd493dcbfd47c678.jpg',
+      state: 'hidden'
+    },
+  ];
+
+ 
+
+}
