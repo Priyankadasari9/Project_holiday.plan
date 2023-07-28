@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Leh & Ladhak</h2><br>
+      <p>Due to the strong influence of Tibetan Buddhism, Leh is also known as Little Tibet or the Land of Lamas. Barren mountains with brightly painted gompas (or monasteries), fluttering prayer flags, rocky ridges, tiny settlements and the Indus River add to the overall charm of the region.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 9D & 8N.</h4>
+<h4><p>Package costs 14000₹</p></h4>
+<h4><p>Places covered:Pangong Tso,Hall of Fame,</p></h4>
+    <h4><p>Thiksey Monastery,Gurdwara Pathar Sahib,</p></h4>
+        <h4><p>Indus and Zanskar Rivers,Shanti Stupa.</p></h4>
+</div>
+  <div class="images" id="Leh">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://thumbs.dreamstime.com/b/gurdwara-pathar-sahib-beautiful-constructed-memory-guru-nanak-miles-away-leh-ladakh-india-253079295.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://stokpalaceheritage.com/blog/wp-content/uploads/2022/03/hall-of-fame1-Pallavi-Jayaraman.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://discoverlehladakh.in/wp-content/uploads/2020/06/Sangam-point-Leh-Ladakh.jpg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2bkVR5IiGYMWszQSB4FN620sJdVpu-yRCw&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.india.com/wp-content/uploads/2018/08/Pangong-Main.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://static.toiimg.com/thumb/49409286.cms?resizemode=75&width=1200&height=900" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+</div>
+</body>
+</html>
+  
+
+---------------------------
+ts
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-leh',
+  templateUrl: './leh.component.html',
+  styleUrls: ['./leh.component.css']
+})
+export class LehComponent {
+  holidayDestinations = [
+    {
+      name: 'Pangong Tso',
+      description: 'Pangong Lake, situated at a height of almost 4,350m, is the worlds highest saltwater lake. Its water, which seems to be dyed in blue, stand in stark contrast to the arid mountains surrounding it.',
+      imageUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwG9JFIPagu02At4wys4GDL8aJYizy4yCkgg&usqp=CAU' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Thiksey Monastery',
+      description: 'The Thiksey monastery is located in Thiksey, which is 19 kilometers east of Leh, Ladakh. It is the largest monastery in central Ladakh. And is famous for its resemblance to the Potala Palace in Lhasa. The monastery is affiliated with the Gelugpa sect or Yellow Hat sect of Tibetan Buddhism.',
+      imageUrl: 'https://www.bauddhas.com/wp-content/uploads/2021/12/New-Project-2021-12-14T151053.630.jpg',
+      state: 'hidden'
+    },
+  ];
+}
