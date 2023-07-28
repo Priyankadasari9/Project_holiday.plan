@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Gokarna</h2><br>
+      <p>Gokarna is a town on the Arabian Sea, in the southwestern Indian state of Karnataka. A popular pilgrimage destination for Hindus, it’s known for sacred sites like Mahabaleshwar Temple, which has a shrine dedicated to the deity Shiva. Nearby, Koti Teertha is a temple tank where devotees wash in the holy waters. The town is also home to beaches such as palm-lined Gokarna, in the center, plus Kudle and Om farther south</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 4D & 3N.</h4>
+<h4><p>Package costs 7000₹</p></h4>
+<h4><p>Places covered:Mahabaleswara Temple,Om Beach,Paradise Beach,Kudle Beach,</p></h4>
+    <h4><p>Mirjan Fort,Half Moon Beach,Yana caves,</p></h4>
+        <h4><p>Apsarakonda falls,Vibhoothi falls,Dandeli water sports </p></h4>
+</div>
+  <div class="images" id="gokarna">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.cdn.zostel.com/zostel/gallery/images/_an1bHWaQnKXGbfqJit26Q/gokarna-20230223110705.png?w=600" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://telugu.samayam.com/thumb/98396311/gokarna-thumb-98396311.jpg?imgsize=199896&width=1200&height=900&resizemode=75" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.sahyogmantratours.com/images/blogs/whatsapp-image-2020-05-22-at-8-58-58-pm-20200905105839-1_crop.jpeg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://assets-news.housing.com/news/wp-content/uploads/2022/09/10082811/Yana-Caves-5.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.bikatadventures.com/images/Gallery/IMG1000X548/img-Kumta-Gokarna-Beach-Trek4755-Bikat-Adventures.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://vl-prod-static.b-cdn.net/system/images/000/604/392/c47459d9a53022d514aef7e4bb9fb3ec/banner/jog-falls-infull-spate-during-mid-august-2013.jpeg?1656412670" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+</div>
+</body>
+</html>
+  ------------------------------------------
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-gokarna',
+  templateUrl: './gokarna.component.html',
+  styleUrls: ['./gokarna.component.css']
+})
+export class GokarnaComponent {
+ 
+  holidayDestinations = [
+    {
+      name: 'Murudeshwar',
+      description: 'Ornate Hindu temple with a giant statue of Shiva perched dramatically on a peninsula.',
+      imageUrl:'https://atmanirvana.com/wp-content/uploads/2020/07/shiva-hindu-god-murudeshwar-temple-india.jpg' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Vibhuti falls',
+      description: 'Vibhuthi Falls is located in Achave Gram panchayat, Ankola taluk of Uttara Kannada district in Karnataka, India. The word "Vibhuthi" means limestone. The water in this falls comes past limestone rocks near Yana and so the falls is called as "Vibhuthi Falls".',
+      imageUrl: 'https://twinsontoes.com/wp-content/uploads/vibhuti-falls-gokarna.jpg',
+      state: 'hidden'
+    },
+  ];
+
+}
