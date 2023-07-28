@@ -1,0 +1,189 @@
+
+<div class="scroll-container">
+<body class="background-image">
+  <div class="col-md-5 col-md-offset-6">
+
+<!-- travel-form.component.html -->
+<br><form (ngSubmit)="submitForm()" #travelForm="ngForm" novalidate>
+    <div>
+      <label ><b>Book your dream plan!</b></label>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        [(ngModel)]="formData.name"
+        required
+      />
+      <div *ngIf="travelForm.submitted && travelForm.controls['name'].invalid">
+        Name is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="phone">Phone Number:</label>
+      <input
+        type="text"
+        id="phone"
+        name="phone"
+        [(ngModel)]="formData.phone"
+        required
+      />
+      <div *ngIf="travelForm.submitted && travelForm.controls['phone'].invalid">
+        Phone number is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        [(ngModel)]="formData.email"
+        required
+      />
+      <div *ngIf="travelForm.submitted && travelForm.controls['email'].invalid">
+        Email is required and should be a valid email address.
+      </div>
+    </div>
+  
+    <div>
+      <label for="address">Address:</label>
+      <textarea
+        id="address"
+        name="address"
+        [(ngModel)]="formData.address"
+        required
+      ></textarea>
+      <div *ngIf="travelForm.submitted && travelForm.controls['address'].invalid">
+        Address is required.
+      </div>
+    </div>
+  
+    <div>
+      <label for="noOfAdults">No of Adults:</label>
+      <input
+        type="number"
+        id="noOfAdults"
+        name="noOfAdults"
+        [(ngModel)]="formData.noOfAdults"
+        required
+      />
+      <div *ngIf="travelForm.submitted && travelForm.controls['noOfAdults'].invalid">
+        No of Adults is required and should be a number.
+      </div>
+    </div>
+  
+    <div>
+      <label for="noOfChildren">No of Children:</label>
+      <input
+        type="number"
+        id="noOfChildren"
+        name="noOfChildren"
+        [(ngModel)]="formData.noOfChildren"
+        required
+      />
+      <div *ngIf="travelForm.submitted && travelForm.controls['noOfChildren'].invalid">
+        No of Children is required and should be a number.
+      </div>
+    </div>
+    <div>
+        <label for="dateOfJourney">Date of Journey:</label>
+        <input
+          type="date"
+          id="dateOfJourney"
+          name="dateOfJourney"
+          [(ngModel)]="formData.dateOfJourney"
+          required
+        />
+        <!-- Validation message -->
+        <div *ngIf="travelForm.submitted && travelForm.controls['dateOfJourney'].invalid">
+          Date of Journey is required.
+        </div>
+      </div>
+
+      <div>
+        <label for="dateOfReturn">Date of Return:</label>
+        <input
+          type="date"
+          id="dateOfReturn"
+          name="dateOfReturn"
+          [(ngModel)]="formData.dateOfReturn"
+          required
+        />
+        <!-- Validation message -->
+        <div *ngIf="travelForm.submitted && travelForm.controls['dateOfReturn'].invalid">
+          Date of Return is required.
+        </div>
+      </div><br>
+    
+      <div>
+        <div class="button">
+          <a [routerLink]="['/hotels']" class="w3-btn w3-blue">View Hotels</a></div><br>
+        <label for="hotel">Hotel:</label>
+        <select id="hotel" name="hotel" [(ngModel)]="formData.hotel" required>
+          <option value="" disabled selected>Select a hotel</option>
+          <option value="hotel1">Taj West End</option>
+          <option value="hotel2">The Oberoi Mumbai</option>
+          <option value="hotel3">The Tamara Coorg</option>
+          <option value="hotel4">Oberoi Rajvilas</option>
+          <option value="hotel5">Trident Gurgaon</option>
+          <option value="hotel6">Taj Lake Palace</option>
+          <option value="hotel7">Radisson Blu Agra Taj East Gate</option>
+          <option value="hotel8">Taj Falaknuma Palace</option>
+          <option value="hotel9">The Oberoi Cecil</option>
+          <option value="hotel10">Coconut Lagoon</option>
+          <option value="hotel11">Vivanta by Taj - Dal View</option>
+          <option value="hotel12">The Leela Palace</option>
+          <option value="hotel13">Park Hyatt Chennai</option>
+          <option value="hotel14">Wildflower Hall</option>
+          <option value="hotel15">Umaid Bhawan Palace</option>
+          <option value="hotel16">ITC Grand Goa Resort & Spa</option>
+          <option value="hotel17">Ananda in the Himalayas</option>
+          <option value="hotel18">The Oberoi Amarvilas</option>
+          <option value="hotel19">Rambagh Palace</option>
+          <option value="hotel20">Taj Mahal Palace</option>
+         
+       
+        </select>
+        <!-- Validation message -->
+        <div *ngIf="travelForm.submitted && travelForm.controls['hotel'].invalid">
+          Hotel is required.
+        </div>
+      </div><br>
+    
+      <div>
+        <label for="package">Package:</label>
+        <select id="package" name="package" [(ngModel)]="formData.package" required>
+          <option value="" disabled selected>Select a package</option>
+          <option value="package1">Delhi</option>
+          <option value="package2">Kerala</option>
+          <option value="package3">Gokarna</option>
+          <option value="package4">Goa</option>
+          <option value="package5">Pondicherry</option>
+          <option value="package6">Coorg & chikmagalur</option>
+          <option value="package7">Manali</option>
+          <option value="package8">Leh,Ladakh</option>
+          <option value="package9">Udaipur</option>
+          <option value="package10">Mumbai</option>
+          <option value="package11">Rameshwaram</option>
+          <option value="package12">Telangana & AP</option>
+         
+        </select>
+      
+        <div *ngIf="travelForm.submitted && travelForm.controls['package'].invalid">
+          Package is required.
+        </div>
+      </div>
+  
+ 
+  
+    <button type="submit">Book Now</button>
+  </form>
+
+</div>
+  </body>
+
+
+  </div>
