@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Coorg & Chikmagalur</h2><br>
+      <p>Kodagu, also known as Coorg, is a rural district in the southwest Indian state of Karnataka. In the area’s north, Madikeri Fort has 2 life-size elephant statues at its entrance, plus a Gothic-style church with a museum on its grounds. Nearby, the Hindu Omkareshwara Temple dates back to the 19th century. Farther north are the domed Raja’s Tomb, a burial place of Kodava kings, and cascading Abbi Falls.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 4D & 3N.</h4>
+<h4><p>Package costs 6000₹</p></h4>
+<h4><p>Places covered :Baba Budangiri,Abbey Falls,Namdroling Monastery, </p></h4>
+    <h4><p>Mullayanagiri,Manikyadhara Falls,</p></h4>
+        <h4><p>Dubare Elephant Camp,Hebbe Falls,Jhari Waterfalls.</p></h4>
+</div>
+  <div class="images" id="coorg">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://img.onmanorama.com/content/dam/mm/en/travel/outside-kerala/images/2022/4/17/coorg1.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.tajhotels.com/content/dam/thrp/destinations/Coorg/16x7intro/Coorg-16X7.jpg/jcr:content/renditions/cq5dam.web.1280.1280.jpeg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://cdn.xafari.in/artical-images/artical-images-1655444164995.jpg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://r2imghtlak.mmtcdn.com/r2-mmt-htl-image/flyfish/raw/NH71036233047826/QS1042/QS1042-Q1/1668617264620.jpeg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://metrosaga.com/wp-content/uploads/2018/10/2-e1544592499874.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRadk2MmFC80OddAXq9vDEFS4tQIRQ7wRSCOA&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+</div>
+</body>
+</html>
+  ---------------------------------------------------
+  ts
+
+  import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-coorg',
+  templateUrl: './coorg.component.html',
+  styleUrls: ['./coorg.component.css']
+})
+export class CoorgComponent {
+  holidayDestinations = [
+    {
+      name: 'Elephant camp',
+      description: 'At the Dubare Elephant Camp, a visitor can spend hours simply watching Elephants and of course, learning more about them. A trained Naturalist is at hand to explain the various aspects of Elephant history, ecology and biology.',
+      imageUrl:'https://dynamic.tourtravelworld.com/hotspot-images/dubare-elephant-camp-coorg-5408.jpg' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Jhari Waterfalls',
+      description: 'Jhari Waterfalls, also known as the Buttermilk Falls, is situated near Attigundi at a distance of 12 km from Baba Budangiri. It is one of the most famous waterfalls in the Chikmagalur district and one of the best tourist places in the district.',
+      imageUrl: 'https://static.wixstatic.com/media/fd4e21_0abd8844f6664a10bc4bef39025a328a~mv2.jpg/v1/fill/w_900,h_480,al_c,lg_1,q_85/fd4e21_0abd8844f6664a10bc4bef39025a328a~mv2.jpg',
+      state: 'hidden'
+    },
+  ];
+
+}
