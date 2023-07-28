@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 .background-image {
-    background-image: url('/assets/reg.jpeg');
+    background-image: url('https://img.freepik.com/free-vector/realistic-travel-background-with-elements_52683-77784.jpg?w=2000');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
