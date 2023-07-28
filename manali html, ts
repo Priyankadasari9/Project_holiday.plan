@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Manali</h2><br>
+      <p>Manali is known for its shiny gompas or Buddhist monasteries. With the highest concentration of Tibetan refugees in the entire Kullu valley, it is famous for its Gadhan Thekchhokling Gompa, built in 1969.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 7D & 6N.</h4>
+<h4><p>Package costs 12000₹</p></h4>
+<h4><p>Places covered:Hidimba Devi Temple,Beas River,</p></h4>
+    <h4><p>Solang Valley,Jogini Waterfall,</p></h4>
+        <h4><p>Manikaran Gurudwara,Solang Nullah.</p></h4>
+</div>
+  <div class="images" id="Manali">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ9rJgJOsbC8H3r7wcImYfGzU_eTPcycAwMg&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAISSfdeY-g6TEX-qka7A84v8RZWQ5qj83Rg&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMhP_yipmKZC7W2GvGo-8_SpmJFj0OBjnQjg&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://www.oyorooms.com/travel-guide/wp-content/uploads/2020/01/Generic-3-12.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://sandrp.files.wordpress.com/2013/06/beas-river.jpg?w=800" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://i0.wp.com/himtimes.com/wp-content/uploads/2023/02/River-Rafting-on-Spiti-River-himachal-pradesh.jpg?ssl=1" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+</div>
+</body>
+</html>
+  
+--------------------------------
+ts 
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-manali',
+  templateUrl: './manali.component.html',
+  styleUrls: ['./manali.component.css']
+})
+export class ManaliComponent {
+
+  holidayDestinations = [
+    {
+      name: 'Solang Valley',
+      description: 'Solang Valley is also called the Snow Valley, which is famous among the tourists for its adventure activities hosted there. Some of the adventure sports like skiing, trekking, mountaineering and also paragliding.',
+      imageUrl:'https://cf.bstatic.com/xdata/images/hotel/max1024x768/229846793.jpg?k=09721bd256af13ad722d9bbd3b2e1bad26f4e66096b73c6395f8a50140895cca&o=&hp=1' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Hidimba Devi Temple',
+      description: 'The Hidimba Devi temple was built in 1553 CE by Maharaja Bahadur Singh. The temple is built around a cave where Devi Hidimba performed meditation. Hidimbi was supposed to have lived there with her brother Hidimb, and not much is known about their parents.',
+      imageUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl3GKdSydzawISO7jQPZGaskSWhllvSqQ17Q&usqp=CAU',
+      state: 'hidden'
+    },
+  ];
+}
