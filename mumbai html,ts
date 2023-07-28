@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Mumbai</h2><br>
+      <p>Mumbai is famous for its bustling markets, street food, and iconic landmarks such as the Gateway of India.</p>
+    </div>
+    <div class="image-container">
+        <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 4D & 3N.</h4>
+<h4><p>Package costs 12000₹</p></h4>
+<h4><p>Places covered : Marine Drive,Gateway of India,Chowpatty Beach,Juhu Beach,</p></h4>
+    <h4><p>Dharavi Slum,Worli Seaface,Haji Ali,Aksa Beach,Versova Beach,Powai Lake,Kanheri Caves,Gorai Beach,ISKCON temple,</p></h4>
+        
+</div>
+  <div class="images" id="delhi">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1073721995_20191213105915_20191213105938.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://i.pinimg.com/originals/e9/4a/d7/e94ad7bf801147f37c80f495b2f2516f.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2018/06/22/696031-girgaum-chowpatty-02.jpg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/03/28/806679-juhu-beach-dna.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dharavi_India.jpg/1200px-Dharavi_India.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://static.toiimg.com/imagenext/toiblogs/photo/blogs/wp-content/uploads/2022/05/IMG_20220522_162923.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+</div>
+</body>
+</html>
+---------------------------------
+ts 
+
+
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-mumbai',
+  templateUrl: './mumbai.component.html',
+  styleUrls: ['./mumbai.component.css']
+})
+export class MumbaiComponent {
+  holidayDestinations = [
+    {
+      name: 'Kanheri caves',
+      description: 'The Kanheri Caves are a group of caves and rock-cut monuments. They contain Buddhist sculptures and relief carvings, paintings, and inscriptions, dating from the 1st century CE to the 10th century CE.',
+      imageUrl:'https://planetofhotels.com/guide/sites/default/files/styles/paragraph__hero_banner__hb_image__1880bp/public/hero_banner/caves-of-kanheri-mumbai.jpg',
+      state: 'hidden'
+    },
+    {
+      name: 'ISKCON temple',
+      description: 'The magnificent ISKCON Temple located in Juhu, Mumbai was built in the 1970s under the guidance of Swami Prabhupada, the founder of the International Society of Krishna Consciousness (ISKCON).',
+      imageUrl: 'https://www.omastrology.com/indian-temples/images/iskcon-temple-mumbai.jpg',
+      state: 'hidden'
+    },
+  ];
+
+
+}
