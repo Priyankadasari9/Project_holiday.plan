@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Udaipur</h2><br>
+      <p>
+        The famous Lake Palace, located in the middle of Lake Pichola is one of the most beautiful sights of Udaipur. It is also home to Jaisamand Lake, claimed to be the second largest man-made sweet water lake in Asia.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 4D & 3N.</h4>
+<h4><p>Package costs 9000₹</p></h4>
+<h4><p>Places covered:Lake Pichola,Jagdish Temple,</p></h4>
+    <h4><p>City Palace of Udaipur,Bagore Ki Haveli Museum,</p></h4>
+        <h4><p>Shri Ekling Ji Temple,Srinathji Temple.</p></h4>
+</div>
+  <div class="images" id="udaipur">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://static2.tripoto.com/media/filter/tst/img/567454/TripDocument/1531720851_img_20161008_170641099_hdr.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.holidify.com/images/cmsuploads/compressed/30883407598_f5348a51cb_b_20190514183627.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://assets.architecturaldigest.in/photos/63a848708df6b9fdb924d677/1:1/pass/undefined" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://udaipurtourism.co.in/images/places-to-visit/headers/jagdish-temple-udaipur-indian-tourism-entry-fee-timings-holidays-reviews-header.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://i0.wp.com/ihaviationandtravel.com/wp-content/uploads/2021/03/img_7403-1.jpg?fit=1200%2C800&ssl=1" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/77/15/9a/photo0jpg.jpg?w=1200&h=1200&s=1" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+</div>
+</body>
+</html>
+  
+--------------------------------------------
+ts 
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-udaipur',
+  templateUrl: './udaipur.component.html',
+  styleUrls: ['./udaipur.component.css']
+})
+export class UdaipurComponent {
+  holidayDestinations = [
+    {
+      name: 'Lake Pichola',
+      description: 'One of the oldest and the biggest lakes in Udaipur, Pichola lake is world famous for its picturesque beauty and scenic surrounding. Rudyard Kipling mentioned this lake in his Letters of Marque (1899), "If the Venetian, owned the Pichola Lake, he might say with justice, see it and die.',
+      imageUrl:'https://udaipurtourism.co.in/images/places-to-visit/headers/lake-pichola-udaipur-indian-tourism-entry-fee-timings-holidays-reviews-header.jpg' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Jagdish Temple',
+      description: 'The temple was built on a tall terrace and the construction was over by the year 1651. It was built by the ruler of Udaipur during the year 1628-1653, Maharaja Jagat Singh. The entire construction of the temple cost 1.5 million rupees during that time. The temple is a perfect example of Maru-Gurjara architecture.',
+      imageUrl: 'https://travelbeautifulindia.com/wp-content/uploads/2020/12/jagdish-temple-udaipur.jpg',
+      state: 'hidden'
+    },
+  ];
+}
+
