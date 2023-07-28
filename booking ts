@@ -1,0 +1,65 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-booking',
+  templateUrl: './booking.component.html',
+  styleUrls: ['./booking.component.css']
+})
+export class BookingComponent {
+  formData = {
+    name: '',
+    phone: '',
+    email: '',
+    address: '',
+    noOfAdults: 0,
+    noOfChildren: 0,
+    accommodationType: '', 
+    dateOfJourney: '',
+    dateOfReturn: '', 
+    hotel: '', 
+    package: ''
+  };
+
+  submitForm() {
+
+    console.log('Form data:', this.formData);
+
+    if (this.isFormValid()) {
+      this.showSuccessAlert();
+      this.resetForm();
+   
+    }
+  }
+
+  isFormValid(): boolean {
+  
+    if (this.formData.name.trim() === '' || this.formData.email.trim() === '') {
+      return false;
+    }
+    return true; 
+  }
+
+  showSuccessAlert() {
+  
+    alert('Booking successful!');
+   
+  }
+  resetForm() {
+    // Reset the form data to its initial state
+    this.formData = {
+      name: '',
+      phone: '',
+      email: '',
+      address: '',
+      noOfAdults: 0,
+      noOfChildren: 0,
+      accommodationType: '', 
+      dateOfJourney: '',
+      dateOfReturn: '', 
+      hotel: '', 
+      package: ''
+    };
+
+
+  }
+}
