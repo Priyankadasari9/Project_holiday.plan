@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Pondicherry</h2><br>
+      <p>Pondicherry (or Puducherry), a French colonial settlement in India until 1954, is now a Union Territory town bounded by the southeastern Tamil Nadu state. Its French legacy is preserved in its French Quarter, with tree-lined streets, mustard-colored colonial villas and chic boutiques. A seaside promenade runs along the Bay of Bengal and passes several statues, including a 4m-high Gandhi Memorial. </p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 3D & 2N.</h4>
+<h4><p>Package costs 7000₹</p></h4>
+<h4><p>Places covered:Seaside Promenade,Paradise Beach</p></h4>
+    <h4><p>The Basilica of the Sacred Heart of Jesus,Sri Aurobindo Ashram,</p></h4>
+        <h4><p>Rock Beach,Auroville,French colony</p></h4>
+</div>
+  <div class="images" id="gokarna">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://media.timeout.com/images/105242463/750/422/image.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://www.educationworld.in/wp-content/uploads/2021/01/french-quarters-pondicherry.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://i0.wp.com/www.tusktravel.com/blog/wp-content/uploads/2021/04/Pondicherry-Beach.jpg?fit=800%2C600&ssl=1" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://i0.wp.com/www.zingbus.com/blog/wp-content/uploads/2022/04/Pondicherry-2.jpg?resize=775%2C451&ssl=1" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://i.pinimg.com/originals/6a/39/79/6a397955c214ca6d34ed623e9727659e.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://pondicherrytourism.co.in/images/places-to-visit/header/pondicherry-lighthouse-tourism-entry-fee-timings-holidays-reviews-header.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+</div>
+</body>
+</html>
+  ----------------------------------------
+
+  ts 
+
+
+  import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-pondicherry',
+  templateUrl: './pondicherry.component.html',
+  styleUrls: ['./pondicherry.component.css']
+})
+export class PondicherryComponent {
+  holidayDestinations = [
+    {
+      name: 'French colony',
+      description: 'The White Town area of this town is referred to as the French Quarter. Most of the structures are colonial buildings and were built during the French rule in the Indian subcontinent. Now referred to as Puducherry or just as Pondy, this little town is one of the union territories of the Indian subcontinent.',
+      imageUrl:'https://www.thehouseofthings.com/wp/wp-content/uploads/2021/09/2.jpg' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Seaside Promenade',
+      description: 'This beach is unique for the presence of a huge wall of rocks along its shore at the Bay of Bengal. The government of Pondicherry has fortified these massive boulders about two decades ago. The government did this to prevent erosion and descending shoreline at Promenade.',
+      imageUrl: 'https://www.trawell.in/admin/images/upload/09285665Pondicherry_Promenade_Beach_Main.jpg',
+      state: 'hidden'
+    },
+  ];
+
+}
+
