@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Plan4Holiday - Your Ultimate Travel Guide</title>
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body id="myPage">
+    <div class="scroll-container">
+ 
+    
+
+<!-- holiday.component.html -->
+<div class="image-wrapper">
+    <div class="matter">
+        <br><br>
+      <h2 style="color: black;">Trip to Goa</h2><br>
+      <p>Mainly known for its beaches, Goa can be the perfect destination for a short holiday. Its sandy beaches and sunny weather attract people from across the globe. Moreover, it has multiple options for entertainment, like parties and nightlife, which also add to an exquisite holiday.</p>
+    </div>
+    <div class="image-container">
+      <div class="image-slide" *ngFor="let destination of holidayDestinations">
+        <img [src]="destination.imageUrl" alt="Holiday Destination" class="animated-image" [@slideInOut]="destination.state">
+        <div class="image-text">
+          <h2>{{ destination.name }}</h2>
+          <p>{{ destination.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="topic">
+<h4><p>Pack your bags for 5D & 4N.</h4>
+<h4><p>Package costs 9000₹</p></h4>
+<h4><p>Places covered :Aguada Fort,Basilica of Bom Jesus,</p></h4>
+    <h4><p>Our Lady of the Immaculate,Baga Beach,Candolim, </p></h4>
+        <h4><p>Anjuna Beach,Arambol,Santa Cruz Church.</p></h4>
+</div>
+  <div class="images" id="goa">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://a.travel-assets.com/findyours-php/viewfinder/images/res70/206000/206666-Panaji.jpg?impolicy=fcrop&w=384&h=216&q=medium" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://youthincmag.com/wp-content/uploads/2022/10/goa.jpg" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://images.lifestyleasia.com/wp-content/uploads/sites/7/2021/12/22120136/Trancentral.jpg" class="img-rounded" alt="Car" width="400" height="300"><br><br>
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM1XpgBbFckZfifoa9dJXwf13kT5gzHKtOSJy0M3gSn7xVk8s39X2Gtwik87OUS-pMugA&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn5Lpxow_dtBLj1uBkzbdgqRtJcQ6IGXFhPw&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1IANd4Izin44Z59zWSqBq-4hv6BCZGAwTFQ&usqp=CAU" class="img-rounded" alt="Car" width="400" height="300">&nbsp;
+  
+</div>
+
+<div class="button">
+  <a [routerLink]="['/booking']" class="w3-btn w3-pink">Book your package</a></div>
+  
+</div>
+</body>
+</html>
+  ----------------------------------------
+ts
+
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-goa',
+  templateUrl: './goa.component.html',
+  styleUrls: ['./goa.component.css']
+})
+export class GoaComponent {
+  holidayDestinations = [
+    {
+      name: 'Aguada Fort',
+      description: 'Fort Aguada was the most prized and crucial fort of Portuguese. The fort is so large that it envelops the entire peninsula at the southwestern tip of Bardez. Built on the mouth of Mandovi River, it was strategically located and was the chief defense of Portuguese against the Dutch.',
+      imageUrl:'https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Aguada-Fort_600.jpg' ,
+      state: 'hidden'
+    },
+    {
+      name: 'Basilica of Bom Jesus',
+      description: 'This Jesuit church is Indias first minor basilica, and is considered to be one of the best examples of baroque architecture and Portuguese Colonial architecture in India. It is one of the Seven Wonders of Portuguese Origin in the World.',
+      imageUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/09/3f/d2/8e/basilica-of-bom-jesus.jpg',
+      state: 'hidden'
+    },
+  ];
+
+}
