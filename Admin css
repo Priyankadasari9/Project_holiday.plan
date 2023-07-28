@@ -6,13 +6,15 @@
 	padding: 0;	
 	font-family: Raleway, sans-serif;
 }
-
+.admin{
+	position: absolute;
+	top: 18%;
+}
 .background-image {
-    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210902/pngtree-abstract-glass-morphism-image_776730.jpg');
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/images6/4K-Travel-Wallpaper-HD-Free-download.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    
-  height:700;
+    height:900px;
   }
 
 .container {
@@ -20,6 +22,8 @@
 	align-items: center;
 	justify-content: center;
 	min-height: 100vh;
+	
+	
 }
 
 .screen {		
@@ -28,6 +32,8 @@
 	height: 600px;
 	width: 360px;	
 	box-shadow: 0px 0px 24px #b268a7;
+	width: 400px;
+	border-radius: 20px;
 }
 
 .screen__content {
